@@ -29,6 +29,9 @@ Route::group(['middleware'=>'auth'],function (){
         Route::get('user_addresses', 'UserAddressionController@index')->name('user_addresses.index');
         Route::get('user_addresses/create', 'UserAddressionController@create')->name('user_addresses.create');
         Route::post('user_addresses', 'UserAddressionController@store')->name('user_addresses.store');
+        Route::get('user_addresses/{user_address}', 'UserAddressionController@edit')->name('user_addresses.edit');
+        Route::put('user_addresses/{user_address}', 'UserAddressionController@update')->name('user_addresses.update');
+        Route::delete('user_addresses/{user_address}', 'UserAddressionController@destroy')->name('user_addresses.destroy');
     });
 });
 
