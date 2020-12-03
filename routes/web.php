@@ -27,6 +27,8 @@ Route::group(['middleware'=>'auth'],function (){
 //       }) ;
 
         Route::get('user_addresses', 'UserAddressionController@index')->name('user_addresses.index');
+        Route::get('user_addresses/create', 'UserAddressionController@create')->name('user_addresses.create');
+        Route::post('user_addresses', 'UserAddressionController@store')->name('user_addresses.store');
     });
 });
 
