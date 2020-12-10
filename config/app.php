@@ -14,7 +14,8 @@ return [
     */
 
     'name' => env('APP_NAME', 'Laravel'),
-
+    //订单关闭时间
+    'order_ttl'=>1800,
     /*
     |--------------------------------------------------------------------------
     | Application Environment
