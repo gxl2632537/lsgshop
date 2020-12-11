@@ -2,7 +2,7 @@
 
 
 namespace App\Services;
-use App\Models\CartItem;
+use App\Models\CarItem;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -24,7 +24,7 @@ class CartService
             ]);
         } else {
             // 否则创建一个新的购物车记录
-            $item = new CartItem(['amount' => $amount]);
+            $item = new CarItem(['amount' => $amount]);
             $item->user()->associate($user);
             $item->productSku()->associate($skuId);
             $item->save();
