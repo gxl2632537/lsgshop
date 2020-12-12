@@ -105,7 +105,6 @@ class UsersController extends Controller
         $show->email_verified('Email verified');
         $show->created_at('Created at');
         $show->updated_at('Updated at');
-
         return $show;
     }
 
