@@ -71,6 +71,15 @@
                             @endif
                         </div>
                         <div class="order-summary text-right">
+                            <!-- 展示优惠信息开始 -->
+                            @if($order->couponCode)
+                                <div class="text-primary">
+                                    <span>优惠信息：</span>
+                                    <div class="value">{{ $order->couponCode->description }}</div>
+                                </div>
+                            @endif
+                        <!-- 展示优惠信息结束 -->
+
                             <div class="total-amount">
                                 <span>订单总价：</span>
                                 <div class="value">￥{{ $order->total_amount }}</div>
@@ -122,6 +131,8 @@
                                     <button class="btn btn-sm btn-danger" id="btn-apply-refund">申请退款</button>
                                 </div>
                             @endif
+
+
                         </div>
                     </div>
                 </div>
